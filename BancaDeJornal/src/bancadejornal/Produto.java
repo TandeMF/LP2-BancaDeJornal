@@ -38,6 +38,12 @@ public class Produto {
         this.quantidade = quantidade;
     }
     
-    
-    
+    public String darBaixa(int quantidade) {
+        if (this.quantidade - quantidade >= 0) {
+            this.quantidade = this.quantidade - quantidade;
+            return "Baixa registrada";
+        }
+        else
+            return "Quantidade indisponível";
+    }
 }
